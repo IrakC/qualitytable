@@ -5,20 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reporte de calidad</title>
+    <script>
+
+</script>
 </head>
 
 <style>
 #titulo{
-    background-color: rgb(226, 179, 168);
+    background-color: rgb(26, 179, 168);
     padding: 10px;
     text-align:center;
-    border-bottom:2px solid rgb(24, 47, 48);
+    border-bottom:2px solid rgb(26, 47, 48);
+    width: 500px;
+    margin: 0 auto;
 }
+
+#tablaC tr.even{
+        background-color: silver;
+}
+
+#tablaC tr:hover {
+    background-color: steelblue;
+}
+
+#tablaC th{
+    border-bottom: 2px solid black;
+}
+
 </style>
+
+
 <body>
+
+    
     <h1 id='titulo'>Reporte de calidad</h1>
+    <button onclick="addRow()">Hola</button>
+    <table id="tablaC">
+        <thead>
+            <tr>
+            <th>Nombre de la Pieza</th>
+            <th>Código</th>
+            <th>Nº de Piezas</th>
+            <th>Target</th>
+            <th>Medición 1</th>
+            <th>Medición 2</th>
+            <th>Medición 3</th>
+            <th>Toleracia</th>
+            <th>Unidades de Medición</th>
+            </tr>    
+        </thead>
+        <tbody id="tableCBody">
+            <tr>
+                <td>oso</td>
+                <td>A</td>
+                <td>1</td>
+                <td>23.49</td>
+                <td>23.51</td>
+                <td>23.50</td>
+                <td>23.53</td>
+                <td>2-8%</td>
+                <td>mm</td>
+            </tr>
+            <tr class="even">
+                    <td>oso</td>
+                    <td>A</td>
+                    <td>1</td>
+                    <td>23.49</td>
+                    <td>23.51</td>
+                    <td>23.50</td>
+                    <td>23.53</td>
+                    <td>2-8%</td>
+                    <td>mm</td>
+                </tr>
+        </tbody>
+    </table>
 
-
+    <script>
+    function addRow(){
+        var table = document.getElementById("tableCBody");
+        var row = table.insertRow(2);
+    }
+    </script>
+    
     
 </body>
 </html>
