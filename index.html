@@ -31,7 +31,7 @@
 }
 
 body{
-    width: 800px;
+    width: 700px;
     margin: 0 auto;
 }
 
@@ -42,13 +42,12 @@ body{
 
     
     <h1 id='titulo'>Reporte de calidad</h1>
-    <button onclick="addRow()">Hola</button>
+
     <table id="tablaC">
         <thead>
             <tr>
-            <th>Nombre de la Pieza</th>
+            <th id="nombrePieza">Nombre de la Pieza</th>
             <th>Código</th>
-            <th>Nº de Piezas</th>
             <th>Target</th>
             <th>Medición 1</th>
             <th>Medición 2</th>
@@ -59,9 +58,13 @@ body{
         </thead>
         <tbody id="tableCBody">
             <tr>
-                <td>oso</td>
-                <td>A</td>
-                <td>1</td>
+                <td>
+                    <span onclick = 'insert(this)'>oso</span>
+                </td>
+                <td>
+                    A
+                    <input type="text">
+                </td>
                 <td>23.49</td>
                 <td>23.51</td>
                 <td>23.50</td>
@@ -72,7 +75,6 @@ body{
             <tr class="even">
                     <td>oso</td>
                     <td>A</td>
-                    <td>1</td>
                     <td>23.49</td>
                     <td>23.51</td>
                     <td>23.50</td>
@@ -83,12 +85,7 @@ body{
         </tbody>
     </table>
 
-    <script>
-    function addRow(){
-        var table = document.getElementById("tableCBody");
-        var row = table.insertRow(2);
-    }
-    </script>
+    <script src='app.js'></script>
     
     
 </body>
